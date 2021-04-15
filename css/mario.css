@@ -614,7 +614,7 @@ footer #wall {
       height: 5px;
    }
    #pipe1::before {
-      content: "_________";
+      content: "__________";
       color: yellowgreen;
       margin-left: -12px;
       border: 2px solid black;
@@ -650,7 +650,7 @@ footer #wall {
       width: 50px;
       height: 30px;
       position: absolute;
-      top: 55%;
+      top: 56%;
       animation: mush 5.5s linear 0.1s;
       left: 58%;
       display: none;
