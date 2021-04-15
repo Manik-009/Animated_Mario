@@ -1,0 +1,678 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background: rgb(98, 149, 245);
+   color: #fff;
+   font-family: monospace;
+   text-transform: uppercase;
+}
+.top {
+   justify-content: space-evenly;
+   display: flex;
+   text-align: center;
+   align-items: center;
+   margin-top: 20px;
+}
+.top #meter p {
+   letter-spacing: 1px;
+}
+.top h3 {
+   font-size: 1.4em;
+   letter-spacing: 2px;
+   margin-bottom: -8px;
+}
+.top p {
+   font-size: 1.3em;
+}
+.top #coin {
+   display: flex;
+   align-self: flex-end;
+   letter-spacing: 2px;
+}
+#coin h4 {
+   width: 9px;
+   height: 20px;
+   color: sienna;
+   border-radius: 50%;
+   background: radial-gradient(circle, yellow, rgb(172, 148, 12));
+}
+#time p {
+   text-align: right;
+}
+.cloud {
+   display: flex;
+   height: 20vh;
+   overflow: hidden;
+   justify-content: space-around;
+   align-items: flex-end;
+}
+.cloud #cloud1 {
+   width: 100px;
+   align-self: center;
+   height: 60px;
+   clip-path: polygon(
+      50% 0%,
+      83% 6%,
+      100% 35%,
+      85% 59%,
+      74% 76%,
+      47% 83%,
+      19% 74%,
+      7% 56%,
+      8% 33%,
+      28% 29%
+   );
+   background: radial-gradient(ellipse, aliceblue, whitesmoke);
+}
+#cloud1::before {
+   content: "  ______________";
+   width: 50px;
+   text-shadow: 0px 3px 4px skyblue;
+   height: 50px;
+   color: aliceblue;
+}
+.cloud #cloud2 {
+   width: 200px;
+   background: radial-gradient(ellipse, aliceblue, whitesmoke);
+   height: 80px;
+   clip-path: polygon(
+      29% 10%,
+      54% 29%,
+      85% 8%,
+      100% 63%,
+      79% 88%,
+      49% 96%,
+      23% 87%,
+      6% 66%,
+      1% 48%,
+      0 35%
+   );
+}
+#box1 {
+   width: 70px;
+   height: 70px;
+   margin: 6em 33% 6em auto;
+   border-radius: 5px;
+   background: linear-gradient(
+      to top,
+      rgb(216, 198, 96),
+      peru,
+      rgb(223, 205, 104)
+   );
+}
+#box1 p {
+   font-size: 4em;
+   color: sienna;
+   text-shadow: 2px 2px 3px rgb(255, 255, 77);
+   text-align: center;
+   font-family: serif;
+   font-weight: bold;
+}
+.boxes {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   height: 20vh;
+   margin: 8em 0;
+}
+.boxes .shine {
+   width: 70px;
+   height: 70px;
+   font-size: 4em;
+   color: sienna;
+   text-shadow: 2px 2px 3px rgb(255, 255, 77);
+   text-align: center;
+   font-family: serif;
+   font-weight: bold;
+   border-radius: 5px;
+   background: linear-gradient(
+      to top,
+      rgb(216, 198, 96),
+      peru,
+      rgb(223, 205, 104)
+   );
+}
+.boxes .pairbox {
+   display: inline-flex;
+}
+.pairbox .none {
+   width: 70px;
+   height: 70px;
+   background: sienna;
+   border-radius: 5px;
+}
+.none::before {
+   content: "__________";
+   width: 50px;
+   filter: blur(2px);
+   height: 50px;
+   color: #000;
+}
+.none::after {
+   content: "__________";
+   padding: 15px 0;
+   filter: blur(2px);
+   display: block;
+   width: 50px;
+   height: 50px;
+   color: #000;
+}
+footer #wall {
+   background: sienna;
+   width: 100%;
+   height: 10ch;
+   padding: 5px 0;
+}
+#wall p {
+   width: 100%;
+   filter: blur(2px);
+   background: black;
+   height: 2px;
+   margin-top: 15px;
+}
+.grass {
+   display: flex;
+   justify-content: space-around;
+}
+.grass img {
+   width: 70px;
+   margin-top: 50px;
+   height: 50px;
+   filter: drop-shadow(-10px 5px 5px rgba(0, 0, 0, 0.7));
+   position: relative;
+   animation: mario 10s linear 0.1s 1;
+   z-index: 400;
+   display: none;
+}
+@keyframes mario {
+   0% {
+      transform: translateX(0vw) translateY(0px);
+   }
+   10% {
+      transform: translateX(10vw) translateY(0);
+   }
+   20% {
+      transform: translateX(18vw) translateY(-200px);
+   }
+   30% {
+      transform: translateX(20vw) translateY(0);
+   }
+   40% {
+      transform: translateX(30vw) translateY(0px);
+   }
+   45% {
+      transform: translateX(40vw) translateY(0px);
+   }
+   50% {
+      transform: translateX(50vw) translateY(-200px);
+   }
+   60% {
+      transform: translateX(55vw) translateY(0);
+   }
+   70% {
+      transform: translateX(58vw) translateY(-200px);
+   }
+   80% {
+      transform: translateX(63vw) translateY(0px);
+   }
+   85% {
+      transform: translateX(70vw) translateY(-100px);
+   }
+   90% {
+      transform: translateX(80vw) translateY(-120px);
+   }
+   100% {
+      transform: translateX(100vw) translateY(0);
+   }
+}
+.grass #grass1 {
+   width: 150px;
+   clip-path: polygon(
+      19% 52%,
+      37% 44%,
+      79% 57%,
+      100% 100%,
+      65% 100%,
+      44% 100%,
+      4% 100%,
+      5% 79%,
+      4% 69%
+   );
+   height: 100px;
+   background: linear-gradient(to bottom, yellowgreen, limegreen);
+}
+.grass #grass2 {
+   width: 150px;
+   height: 100px;
+   clip-path: circle(51.6% at 51% 100%);
+   background: linear-gradient(to top, seagreen, green, seagreen);
+}
+#enemy {
+   width: 80px;
+   height: 100px;
+   background: linear-gradient(
+      to bottom,
+      orangered,
+      rgb(212, 184, 184) 85%,
+      #000
+   );
+   clip-path: polygon(
+      0 61%,
+      0 48%,
+      25% 27%,
+      70% 28%,
+      100% 47%,
+      100% 62%,
+      75% 88%,
+      73% 87%,
+      83% 100%,
+      46% 95%,
+      7% 100%,
+      20% 88%
+   );
+   position: relative;
+   animation: enemy 15s linear 0.1s;
+}
+@keyframes enemy {
+   0% {
+      transform: translateX(0px);
+   }
+   30% {
+      transform: translateX(-10vw);
+   }
+   50% {
+      transform: translateX(-20vw);
+   }
+   60% {
+      transform: translateX(-40vw);
+   }
+   70% {
+      transform: translateX(-60vw);
+   }
+   80% {
+      transform: translateX(-80vw);
+   }
+   100% {
+      transform: translateX(-100vw);
+   }
+}
+#enemy::before {
+   content: "";
+   width: 15px;
+   margin-top: 40px;
+   margin-left: 10px;
+   background: radial-gradient(circle, black, orange 45%);
+   border-radius: 40%;
+   display: block;
+   height: 20px;
+}
+#enemy::after {
+   content: "";
+   width: 15px;
+   margin-top: -20px;
+   margin-left: 50px;
+   background: radial-gradient(circle, black, orange 45%);
+   border-radius: 40%;
+   display: block;
+   height: 20px;
+}
+#pipe #pipe1 {
+   width: 100px;
+   height: 15px;
+}
+#pipe1::before {
+   content: "___________________";
+   color: yellowgreen;
+   margin-left: -20px;
+   border: 2px solid black;
+   background: linear-gradient(to right, lightgreen, yellowgreen);
+}
+#mushroom img {
+   width: 110px;
+   height: 60px;
+   position: absolute;
+   top: 52.5%;
+   animation: mush 3.5s linear 0.1s;
+   left: 58%;
+   display: none;
+}
+@keyframes mush {
+   0% {
+      transform: translateX(0);
+   }
+   25% {
+      transform: translateX(100px);
+   }
+   50% {
+      transform: translateX(200px);
+   }
+   75% {
+      transform: translateX(300px);
+   }
+   85% {
+      transform: translateX(350px) translateY(200px);
+   }
+   100% {
+      transform: translateX(400px) translateY(450px);
+   }
+}
+#pipe #pipe2 {
+   width: 100px;
+   border: 2px solid black;
+   background: linear-gradient(to right, lightgreen, yellowgreen);
+   height: 85px;
+}
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   #box1 {
+      width: 50px;
+      height: 50px;
+   }
+   #box1 p {
+      font-size: 2.8em;
+   }
+   .boxes .shine {
+      width: 50px;
+      font-size: 2.8em;
+      height: 50px;
+   }
+   .boxes .none {
+      font-size: 2.8;
+      width: 50px;
+      height: 50px;
+   }
+   .none::before {
+      content: "_______";
+   }
+   .none::after {
+      content: "_______";
+      padding: 10px 0;
+   }
+   footer #wall {
+      background: sienna;
+      width: 100%;
+      height: 15ch;
+      padding: 10px 0;
+   }
+   .grass img {
+      margin-top: 60px;
+      width: 50px;
+      height: 50px;
+   }
+   @keyframes mario {
+      0% {
+         transform: translateX(0vw) translateY(0px);
+      }
+      10% {
+         transform: translateX(10vw) translateY(0);
+      }
+      15% {
+         transform: translateX(15vw) translateY(0px);
+      }
+      20% {
+         transform: translateX(20vw) translateY(-220px);
+      }
+      30% {
+         transform: translateX(25vw) translateY(0);
+      }
+      40% {
+         transform: translateX(30vw) translateY(0px);
+      }
+      45% {
+         transform: translateX(40vw) translateY(0px);
+      }
+      50% {
+         transform: translateX(50vw) translateY(-220px);
+      }
+      60% {
+         transform: translateX(55vw) translateY(0px);
+      }
+      70% {
+         transform: translateX(60vw) translateY(-220px);
+      }
+      80% {
+         transform: translateX(70vw) translateY(0px);
+      }
+      85% {
+         transform: translateX(75vw) translateY(-120px);
+      }
+      90% {
+         transform: translateX(85vw) translateY(-120px);
+      }
+      100% {
+         transform: translateX(100vw) translateY(0);
+      }
+   }
+   .grass #grass1 {
+      margin-top: 10px;
+      height: 100px;
+   }
+   .grass #grass2 {
+      margin-top: 10px;
+   }
+   #enemy {
+      margin-top: 10px;
+      width: 50px;
+   }
+   #enemy::before {
+      content: "";
+   }
+   #enemy::after {
+      content: "";
+      margin-left: 27px;
+   }
+   #pipe #pipe1 {
+      margin-top: 10px;
+   }
+   #mushroom img {
+      width: 70px;
+      height: 50px;
+      position: absolute;
+      top: 52.5%;
+      animation: mush 3.5s linear 0.1s;
+      left: 58%;
+   }
+   @keyframes mush {
+      0% {
+         transform: translateX(0);
+      }
+      25% {
+         transform: translateX(50px);
+      }
+      50% {
+         transform: translateX(100px);
+      }
+      75% {
+         transform: translateX(150px);
+      }
+      85% {
+         transform: translateX(200px) translateY(150px);
+      }
+      100% {
+         transform: translateX(250px) translateY(300px);
+      }
+   }
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   .top p {
+      font-size: 1em;
+      margin-top: 3px;
+   }
+   #coin h4 {
+      width: 7px;
+      height: 15px;
+   }
+   .cloud #cloud2 {
+      width: 150px;
+   }
+   #box1 {
+      width: 30px;
+      height: 30px;
+   }
+   #box1 p {
+      font-size: 1.7em;
+   }
+   .boxes {
+      margin: 5em 0;
+   }
+   .boxes .shine {
+      width: 30px;
+      height: 30px;
+      font-size: 1.7em;
+   }
+   .boxes .none {
+      width: 35px;
+      height: 30px;
+      font-size: 1.7em;
+   }
+   .none::before {
+      content: "	\01D11A\01D11A";
+      width: 10px;
+
+      filter: blur(1px);
+      height: 10px;
+      color: #000;
+   }
+   .none::after {
+      content: "";
+   }
+   footer #wall {
+      background: sienna;
+      width: 100%;
+      height: 20ch;
+      padding: 15px 0;
+   }
+   .grass img {
+      width: 30px;
+      height: 50px;
+      filter: drop-shadow(-10px 5px 5px rgba(0, 0, 0, 0.7));
+      position: relative;
+      animation: mario 10s linear 0.1s 1;
+      z-index: 400;
+      margin-top: 0px;
+      display: none;
+   }
+   @keyframes mario {
+      0% {
+         transform: translateX(0vw) translateY(0px);
+      }
+      10% {
+         transform: translateX(10vw) translateY(0);
+      }
+      20% {
+         transform: translateX(15vw) translateY(-120px);
+      }
+      30% {
+         transform: translateX(20vw) translateY(0);
+      }
+      40% {
+         transform: translateX(30vw) translateY(0px);
+      }
+      45% {
+         transform: translateX(35vw) translateY(0px);
+      }
+      50% {
+         transform: translateX(40vw) translateY(-120px);
+      }
+      60% {
+         transform: translateX(50vw) translateY(0);
+      }
+      70% {
+         transform: translateX(59vw) translateY(-120px);
+      }
+      80% {
+         transform: translateX(63vw) translateY(70px);
+      }
+      85% {
+         transform: translateX(70vw) translateY(-100px);
+      }
+      90% {
+         transform: translateX(80vw) translateY(-80px);
+      }
+      100% {
+         transform: translateX(100vw) translateY(0);
+      }
+   }
+   .grass #grass1 {
+      width: 40px;
+      height: 50px;
+   }
+   .grass #grass2 {
+      width: 70px;
+      height: 50px;
+      clip-path: circle(51.6% at 51% 100%);
+      background: linear-gradient(to top, seagreen, green, seagreen);
+   }
+   #enemy {
+      width: 25px;
+      height: 50px;
+   }
+   #pipe #pipe1 {
+      width: 80px;
+      height: 5px;
+   }
+   #pipe1::before {
+      content: "_________";
+      color: yellowgreen;
+      margin-left: -12px;
+      border: 2px solid black;
+      background: linear-gradient(to right, lightgreen, yellowgreen);
+   }
+   #pipe #pipe2 {
+      width: 50px;
+      border: 2px solid black;
+      background: linear-gradient(to right, lightgreen, yellowgreen);
+      height: 45px;
+   }
+   #enemy::before {
+      content: "";
+      width: 5px;
+      margin-top: 20px;
+      margin-left: 4px;
+      background: radial-gradient(circle, black, orange 45%);
+      border-radius: 40%;
+      display: block;
+      height: 5px;
+   }
+   #enemy::after {
+      content: "";
+      width: 5px;
+      margin-top: -5px;
+      margin-left: 12px;
+      background: radial-gradient(circle, black, orange 45%);
+      border-radius: 40%;
+      display: block;
+      height: 5px;
+   }
+   #mushroom img {
+      width: 50px;
+      height: 30px;
+      position: absolute;
+      top: 55%;
+      animation: mush 5.5s linear 0.1s;
+      left: 58%;
+      display: none;
+   }
+   @keyframes mush {
+      0% {
+         transform: translateX(0);
+      }
+      25% {
+         transform: translateX(30px);
+      }
+      50% {
+         transform: translateX(60px);
+      }
+      75% {
+         transform: translateX(90px);
+      }
+      85% {
+         transform: translateX(120px) translateY(200px);
+      }
+      100% {
+         transform: translateX(150px) translateY(450px);
+      }
+   }
+}

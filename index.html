@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/mario.css" />
+      <title>Super Mario</title>
+   </head>
+   <body onload="clickme()">
+      <audio autoplay>
+         <source src="images/tune.mp3" type="audio/mp3" />
+      </audio>
+      <div class="top">
+         <div id="meter">
+            <h3>mario</h3>
+            <p>000300</p>
+         </div>
+         <div id="coin">
+            <h4>|</h4>
+            <p>x01</p>
+         </div>
+         <div id="world">
+            <h3>world</h3>
+            <p>1 - 1</p>
+         </div>
+         <div id="time">
+            <h3>time</h3>
+            <p id="js">382</p>
+         </div>
+      </div>
+      <div class="cloud">
+         <div id="cloud1"></div>
+         <div id="cloud2"></div>
+      </div>
+      <div id="box1">
+         <p>?</p>
+      </div>
+      <div class="boxes">
+         <p id="pehla" class="shine">?</p>
+         <div class="pairbox">
+            <p class="none"></p>
+            <p id="dusra" class="shine">?</p>
+            <p class="none"></p>
+            <p id="tesra" class="shine">?</p>
+            <p class="none"></p>
+         </div>
+      </div>
+      <div class="grass">
+         <img id="mario" src="images/mario.png" alt="mario " />
+         <div id="grass1"></div>
+         <div id="grass2"></div>
+         <div id="enemy"></div>
+         <div id="pipe">
+            <p id="pipe1"></p>
+            <p id="pipe2"></p>
+         </div>
+      </div>
+      <div id="mushroom">
+         <img id="mushrooms" src="images/mushroom.png" alt="" />
+      </div>
+      <footer>
+         <div id="wall">
+            <p></p>
+            <p></p>
+            <p></p>
+         </div>
+      </footer>
+      <script src="js/mario.js"></script>
+   </body>
+</html>
