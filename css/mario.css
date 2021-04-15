@@ -528,7 +528,7 @@ footer #wall {
       font-size: 1.7em;
    }
    .none::before {
-      content: "	\01D11A\01D11A";
+      content: "	\01D11A";
       width: 10px;
 
       filter: blur(1px);
